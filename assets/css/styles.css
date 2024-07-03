@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+
+}
+
+:root{
+    --color-primario: #000000;
+    --color-secundario: #f6f6f6;
+    --color-tercerario: #22D4FD;
+    --color-hover-botones: #272727;
+    --fuente-Krona: "Krona One", sans-serif;
+    --fuente-montserrat:  "Montserrat", sans-serif;
+}
+
+
+body{
+    box-sizing: border-box;
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+    
+}
+
+.header{
+    padding: 2% 0% 0% 15%;
+}
+
+.header__menu{
+    display: flex;
+    gap: 80px;
+}
+
+.menu__link{
+    font-family: var(--fuente-montserrat); 
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-tercerario);
+    text-decoration: none;
+}
+
+
+
+.title__highlight{
+    color: var(--color-tercerario);
+}
+
+.presentation{
+    display: flex;
+    align-items: center;
+    padding: 6.5% 15%;
+    justify-content: space-between;
+    gap: 82px;
+}
+
+.presentation__content{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;/*Esta propiedad es la monda, me genera espacio entre elmentos, tanto vertical como horizontal*/
+}
+
+.content__title{
+    font-size: 2.25rem;
+    font-weight: 400;
+    font-family: var(--fuente-Krona);
+    font-style: normal;
+}
+
+.content__text{
+    font-size: 1.5rem;
+    font-family: var(--fuente-montserrat);
+    font-style: normal;
+}
+
+.presentation__links{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;/*Sirve para posicionar los elementos verticales y pnerlos al medio*/
+    gap: 32px;
+    
+
+    
+}
+
+.link__button{
+    font-family: var(--fuente-montserrat);
+    font-size: 1.2rem;
+    font-weight: 600;
+    width: 60%;
+    text-align: center;
+    padding: 15px;
+    color: var(--color-secundario);
+    background-color: var(--color-primario);
+    text-decoration: none;
+    border: 2px solid var(--color-tercerario);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    transition: all 300ms ease-in-out ;
+    cursor: pointer;
+}
+
+.link__button:hover{
+    background-color: var(--color-hover-botones);
+}
+
+.presentation__image{
+    width: 50%;
+}
+
+.links__subtitle{
+    font-family: var(--fuente-montserrat);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.footer{
+    background-color: var(--color-tercerario);
+    padding: 24px;
+    color: var(--color-primario);
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+@media (max-width: 1200px){
+
+    .header{
+        padding: 10%;
+    }
+
+    .header__menu{
+        justify-content: center;
+    }
+
+    .presentation{
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+
+    .presentation__content{
+        width: auto;
+    }
+}
